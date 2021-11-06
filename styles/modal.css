@@ -1,0 +1,144 @@
+/* Modal -------------------------------------- */
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(28, 28, 29, 0.9);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+.lightbox {
+	width: 960px;
+	height: 600px;
+	position: relative;
+	cursor: pointer;
+}
+
+.full-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* White Shadow -------------------------------------- */
+.full-white,
+.black-hole {
+	-webkit-animation: glowing 3s infinite;
+	animation: glowing 3s infinite;
+}
+
+@-webkit-keyframes glowing {
+	0% {
+		-webkit-transform: scaleX(0.95);
+		transform: scaleX(0.95);
+		opacity: 0.7;
+	}
+	50% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scaleX(0.95);
+		transform: scaleX(0.95);
+		opacity: 0.7;
+	}
+}
+
+@keyframes glowing {
+	0% {
+		-webkit-transform: scaleX(0.9);
+		transform: scaleX(0.9);
+		opacity: 0.8;
+	}
+	50% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scaleX(0.9);
+		transform: scaleX(0.9);
+		opacity: 0.8;
+	}
+}
+
+/* Pre-order -------------------------------------- */
+.full-pre-order {
+	-webkit-animation: flash 2s infinite;
+	animation: flash 2s infinite;
+}
+
+@-webkit-keyframes flash {
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.full-pre-order,
+.hide {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.hide {
+	z-index: -1;
+}
+
+/* Button-layer -------------------------------------- */
+.button-layer:hover {
+	-webkit-animation: jump 1.2s infinite;
+	animation: jump 1.2s infinite;
+}
+
+@-webkit-keyframes jump {
+	0% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+	}
+	50% {
+		-webkit-transform: rotateX(20deg);
+		transform: rotateX(20deg);
+	}
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+	}
+}
+
+@keyframes jump {
+	0% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+	}
+	50% {
+		-webkit-transform: rotateX(20deg);
+		transform: rotateX(20deg);
+	}
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+	}
+}
