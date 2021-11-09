@@ -1,6 +1,5 @@
 /* Banner -------------------------------------- */
 .banner--wrapper {
-	background-image: url("../images/previewImages/game-bg.png");
 	width: 300px;
 	height: 250px;
 	position: relative;
@@ -31,152 +30,19 @@
 	transform: scaleX(1);
 }
 
-/* All images -------------------------------------- */
-img.preview {
-	position: absolute;
-	top: 0;
-	right: 0;
-	visibility: hidden;
-	opacity: 0;
+.displayNone {
+	display: none;
 }
 
-.shadow {
-	visibility: visible;
-	opacity: 1;
-}
-
-.shadow-white {
-	-webkit-animation: easeInColor 1.5s 0.2s forwards;
-	animation: easeInColor 1.5s 0.2s forwards;
-}
-
-@-webkit-keyframes easeInColor {
+/* Global animations ------------------------------- */
+@-webkit-keyframes appear {
 	to {
 		visibility: visible;
 		opacity: 1;
 	}
 }
 
-@keyframes easeInColor {
-	to {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-.game-cd {
-	-webkit-animation: moveRight 1s 0.5s forwards;
-	animation: moveRight 1s 0.5s forwards;
-}
-
-@-webkit-keyframes moveRight {
-	0% {
-		-webkit-transform: translate(-100%, -50%) rotate(-45deg);
-		transform: translate(-100%, -50%) rotate(-45deg);
-	}
-	100% {
-		-webkit-transform: translate(0) rotate(0deg);
-		transform: translate(0) rotate(0deg);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes moveRight {
-	0% {
-		-webkit-transform: translate(-100%, -50%) rotate(-45deg);
-		transform: translate(-100%, -50%) rotate(-45deg);
-	}
-	100% {
-		-webkit-transform: translate(0) rotate(0deg);
-		transform: translate(0) rotate(0deg);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-/* All banner words -------------------------------------- */
-.game-available {
-	-webkit-animation: appearUpwards 1s 1s forwards;
-	animation: appearUpwards 1s 1s forwards;
-}
-
-.game-now {
-	-webkit-animation: appearDownwards 1s 1.5s forwards;
-	animation: appearDownwards 1s 1.5s forwards;
-}
-
-.pre-order {
-	-webkit-animation: appearDownwards 1s 1.8s forwards;
-	animation: appearDownwards 1s 1.8s forwards;
-}
-
-@-webkit-keyframes appearUpwards {
-	0% {
-		-webkit-transform: translateY(100%);
-		transform: translateY(100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes appearUpwards {
-	0% {
-		-webkit-transform: translateY(100%);
-		transform: translateY(100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes appearDownwards {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes appearDownwards {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-/* Call to action button -------------------------------------- */
-.cta-btn {
-	/* -webkit-animation: moveLeft 1s 2.5s forwards; */
-	animation: moveLeft 1s 2.5s forwards;
-}
-
-@-webkit-keyframes moveLeft {
-	to {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes moveLeft {
+@keyframes appear {
 	to {
 		visibility: visible;
 		opacity: 1;

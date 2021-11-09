@@ -1,16 +1,19 @@
 window.addEventListener("load", () => {
 	const banner = document.querySelector(".banner--wrapper");
 	const modal = document.querySelector(".modal");
+	const mobileView = document.querySelector(".mobile-view");
+	const desktopView = document.querySelector(".desktop-view");
 
-	const showBanner = function () {
+	// Show and Hide Modal ----------------------------------
+	const showModal = function () {
 		modal.classList.remove("hide");
 	};
 
-	const hideBanner = function () {
+	const hideModal = function () {
 		modal.classList.add("hide");
 	};
 
-	const showBannerOnCount = function () {
+	const showModalOnCount = function () {
 		const counter = document.getElementById("counter");
 		let num = 3;
 
@@ -22,7 +25,7 @@ window.addEventListener("load", () => {
 
 			if (num === 0) {
 				counter.classList.add("hide");
-				showBanner();
+				showModal();
 				clearInterval(interval);
 			}
 
@@ -35,9 +38,23 @@ window.addEventListener("load", () => {
 		});
 	};
 
-	banner.addEventListener("mouseover", showBannerOnCount);
+	banner.addEventListener("mouseover", showModalOnCount);
 
-	banner.addEventListener("mouseup", showBanner);
+	banner.addEventListener("mouseup", showModal);
 
-	modal.addEventListener("mouseup", hideBanner);
+	modal.addEventListener("mouseup", hideModal);
+
+	// Change banner when screen resizes to 600px -----------------
+	const windowResizeHandler = function () {
+		if (window.innerWidth < 600) {
+			mobileView.classList.remove("displayNone");
+			desktopView.classList.add("displayNone");
+			return;
+		}
+
+		mobileView.classList.add("displayNone");
+		desktopView.classList.remove("displayNone");
+	};
+
+	window.addEventListener("resize", windowResizeHandler);
 });

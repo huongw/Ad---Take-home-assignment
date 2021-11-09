@@ -1,6 +1,7 @@
 /* Modal -------------------------------------- */
 .modal {
 	position: absolute;
+	z-index: 2;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -34,9 +35,17 @@
 	height: 100%;
 }
 
+/* Logo Shape ---------------------------------------- */
+.logo-shape {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
 /* White Shadow -------------------------------------- */
-.full-white,
-.black-hole {
+.shadows {
 	-webkit-animation: glowing 3s infinite;
 	animation: glowing 3s infinite;
 }
@@ -79,22 +88,9 @@
 
 /* Pre-order -------------------------------------- */
 .full-pre-order {
-	-webkit-animation: flash 2s infinite;
-	animation: flash 2s infinite;
-}
-
-@-webkit-keyframes flash {
-	to {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes flash {
-	to {
-		visibility: visible;
-		opacity: 1;
-	}
+	z-index: 2;
+	-webkit-animation: appear 2s infinite;
+	animation: appear 2s infinite;
 }
 
 .full-pre-order,
@@ -108,9 +104,13 @@
 }
 
 /* Button-layer -------------------------------------- */
+.button-layer {
+	z-index: 3;
+}
+
 .button-layer:hover {
-	-webkit-animation: jump 1.2s infinite;
-	animation: jump 1.2s infinite;
+	-webkit-animation: jump 1.8s infinite;
+	animation: jump 1.8s infinite;
 }
 
 @-webkit-keyframes jump {
@@ -130,15 +130,15 @@
 
 @keyframes jump {
 	0% {
-		-webkit-transform: rotateX(0deg);
-		transform: rotateX(0deg);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
 	}
 	50% {
-		-webkit-transform: rotateX(20deg);
-		transform: rotateX(20deg);
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
 	}
 	100% {
-		-webkit-transform: rotateX(0deg);
-		transform: rotateX(0deg);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
 	}
 }

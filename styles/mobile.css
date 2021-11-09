@@ -1,0 +1,53 @@
+.mobile-view {
+	background-image: url(../images/mobileImages/mobile-bg.png);
+	width: 100%;
+	height: 100%;
+}
+
+/* Mobile video ----------------------------- */
+.mobile-video {
+	animation: appear 2s 1.5s forwards;
+}
+
+.mobile-msg {
+	z-index: 1;
+	animation: appear 2s 2s, appear 2s 1.5s infinite;
+}
+
+.mobile-slogan {
+	animation: moveRight 2s forwards;
+}
+
+@keyframes moveRight {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0);
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+/* Mobile call to action button --------------- */
+.mobile-cta {
+	z-index: 1;
+}
+
+.mobile-cta,
+.mobile-button {
+	animation: scale 2s 2.5s forwards;
+}
+
+@keyframes scale {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+		visibility: visible;
+		opacity: 1;
+	}
+}
